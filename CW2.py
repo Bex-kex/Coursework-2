@@ -98,6 +98,20 @@ def check_solution(grid, n_rows, n_cols):
 	return True
 
 
+def zeros(grid):
+	row = 0
+	location = []
+	while row < len(grid):
+		col = 0
+		while col < len(grid):
+			if grid[row][col] == 0:
+				location1 = [row, col]
+				location.append(location1)
+			col += 1
+		row += 1
+	return location
+
+
 def recursive_solve(grid, n_rows, n_cols):
 
 	#N is the maximum integer considered in this board
@@ -154,5 +168,5 @@ def main():
 	print("Test script complete, Total points: %d" % points)
 
 
-if __name__ == "__main__":
-	main()
+print(zeros(grid6))
+
